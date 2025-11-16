@@ -5,10 +5,9 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     git \
     ca-certificates \
-    curl \
-  && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install pyyaml
+
+RUN pip3 install pyYAML
 
 COPY feed.py /usr/local/bin/feed.py
 COPY entrypoint.sh /entrypoint.sh
